@@ -6,6 +6,9 @@
 .cache
 dist
 
+GitHubSSH
+GitHubSSH.pub
+
 # Node dependencies
 node_modules
 

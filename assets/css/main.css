@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Barley';
+    src: url('@/assets/fonts/barley.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2 {
+    font-family: Barley;
+}

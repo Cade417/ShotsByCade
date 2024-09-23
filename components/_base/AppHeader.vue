@@ -27,6 +27,7 @@
                 <a href="/portfolio" class="text-white navbutton hover:underline">Portfolio</a>
                 <a href="/pricing" class="text-white navbutton hover:underline">Pricing</a>
                 <a href="/contact" class="text-white navbutton hover:underline">Contact</a>
+                <a href="/help" class="text-white navbutton hover:underline">Help</a>
             </nav>
         </div>
         <div class="DesktopNav hidden desktop:block">
@@ -37,6 +38,7 @@
                 <a href="/portfolio" class="text-white navbutton hover:underline">Portfolio</a>
                 <a href="/pricing" class="text-white navbutton hover:underline">Pricing</a>
                 <a href="/contact" class="text-white navbutton hover:underline">Contact</a>
+                <a href="/help" class="text-white navbutton hover:underline">Help</a>
             </nav>
         </div>
 

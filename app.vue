@@ -18,6 +18,8 @@
 useHead({
   titleTemplate: (titleChunk) => {
     return titleChunk ? `${titleChunk} - Shots By Cade` : 'Shots By Cade';
-  }
+  },
+  link: [{rel: 'icon', type: 'image/png', href: 'favicon.ico'
+  }]
 })
 </script>

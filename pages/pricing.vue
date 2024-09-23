@@ -1,4 +1,7 @@
 <template>
+    <Head>
+        <Title>Pricing</Title>
+    </Head>
     <div class="w-[100%] bg-gray-50 bg-cover mt-0 p-4 transition-all" style="background-image: url('/images/2023.08.01_Hay-6.jpg');">
         <div class="page-titleblock">
             <h1 class="text-3xl text-center">Pricing and Packages</h1>

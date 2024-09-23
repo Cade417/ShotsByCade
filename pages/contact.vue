@@ -1,4 +1,7 @@
 <template>
+    <Head>
+        <Title>Contact</Title>
+    </Head>
     <div class="text-center">
         <h1 class="text-2xl">Have questions or need to contact me?</h1>
         <h1 class="text-2xl">Feel free to call or text</h1>

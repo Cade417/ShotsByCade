@@ -1,4 +1,7 @@
 <template>
+    <Head>
+        <Title>About</Title>
+    </Head>
     <div class="p-8 max-w-4xl mx-auto bg-white text-gray-900 text-center">
         <section class="mb-12">
             <h1 class="text-4xl font-bold text-gray-800 mb-4">Welcome to Shots by Cade!</h1>

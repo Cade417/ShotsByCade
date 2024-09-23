@@ -1,4 +1,8 @@
 <template>
+    <Head>
+        <Title>My Work</Title>
+        <Meta name="description" content="My work for you to see, and make sure that you are getting the best."></Meta>
+    </Head>
     <div class="portfolio">
         <h1 class="title">Shots By Cade | Example Work</h1>
 

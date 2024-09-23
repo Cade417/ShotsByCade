@@ -1,4 +1,7 @@
 <template>
+    <Head>
+        <Title>Help</Title>
+    </Head>
     <div class="relative h-[20em] flex items-center justify-center bg-cover bg-center"
     style="background-image: url('/images/baseball/WHS_FBSB_CRANEWOODBAT_GM3-17.webp');">
         <span class="page-title-text text-[8em] text-white bg-black rounded-2xl p-5 uppercase shadow-lg bg-opacity-30">Help</span>

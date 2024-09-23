@@ -1,4 +1,8 @@
 <template>
+    <Head>
+        <Title>Home</Title>
+        <Meta name="description" content="The home page for Shots By Cade. A photographer based out of Southwest Missouri. Contact or book with me today!"></Meta>
+    </Head>
     <div class="bg-black text-white">
         <!-- Hero Section -->
         <section class="relative h-screen flex items-center justify-center bg-cover bg-center"

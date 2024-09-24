@@ -29,6 +29,7 @@
             </div>
             <hr class="BreakupBar"/>
             <h2>If you have any other issues, please use the <a href="/contact">Contact Page</a> to reach out and I'll glady help!</h2>
+            <video src="/videos/DownloadInstructionVideo.mp4" type="video/mp4" controls></video>
         </div>
     </div>
 </template>

@@ -39,7 +39,7 @@
                         <img src="/images/sports.jpg" alt="Featured Work 2"
                             class="w-full h-64 object-cover transform transition-transform duration-300 hover:scale-110" />
                         <div class="p-4">
-                            <h3 class="text-xl font-semibold mb-2">Athletics</h3>
+                            <h3 class="text-xl font-semibold mb-2 uppercase">Athletics</h3>
                             <p class="text-gray-300">With many years at the highest level, photography in sports is my forte.</p>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                         <img src="/images/photoshoot.jpg" alt="Featured Work 3"
                             class="w-full h-64 object-cover transform transition-transform duration-300 hover:scale-110" />
                         <div class="p-4">
-                            <h3 class="text-xl font-semibold mb-2">Photoshoots</h3>
+                            <h3 class="text-xl font-semibold mb-2 uppercase">Photoshoots</h3>
                             <p class="text-gray-300">Are you wanting some photos for yourself, group, or family? I got you covered!</p>
                         </div>
                     </div>

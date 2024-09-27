@@ -12,3 +12,10 @@
 h1, h2 {
     font-family: Barley;
 }
+
+h1 {
+    @apply text-[3em]
+}
+h2 {
+    @apply text-[2em]
+}

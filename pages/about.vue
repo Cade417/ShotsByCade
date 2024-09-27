@@ -2,15 +2,22 @@
     <Head>
         <Title>About</Title>
     </Head>
-    <div class="p-8 max-w-4xl mx-auto bg-white text-gray-900 text-center">
-        <section class="mb-12">
-            <h1 class="text-4xl font-bold text-gray-800 mb-4">Welcome to Shots by Cade!</h1>
-            <p class="text-lg leading-relaxed">
-                I’m Cade Woolaway, a passionate photographer with a deep love for capturing moments that tell compelling
+    <div style="background-image: url('/images/2023.08.01_Hay-6.jpg');" class="fixed w-full h-full z-0 mt-[-8em] bg-cover overflow-hidden">
+        
+    </div>
+    <div class="p-8 max-w-4xl mx-auto bg-white text-black text-center w-full z-5 relative rounded-xl mt-[2em] mb-[2em] shadow-xl">
+        <div class="flex flex-row w-full bg-black rounded-xl overflow-hidden text-white">
+            <div class="w-1/2">
+                <img src="/images/2023-12-02 23.16.00.jpg"/>
+            </div>
+            <div class="w-1/2">
+                <h1>Hi, I'm Cade</h1>
+                <br>
+                <p class="text-[1.2em] m-[1em]">I’m Cade Woolaway, a passionate photographer with a deep love for capturing moments that tell compelling
                 stories. With a background in athletic content creation at the University of Oklahoma, I've developed a
-                keen eye for detail and a knack for bringing out the best in every subject.
-            </p>
-        </section>
+                keen eye for detail and a knack for bringing out the best in every subject.</p>
+            </div>
+        </div>
 
         <section class="mb-12">
             <h2 class="text-3xl font-semibold text-gray-700 mb-4 border-b-2 border-gray-300 pb-2">My Journey</h2>

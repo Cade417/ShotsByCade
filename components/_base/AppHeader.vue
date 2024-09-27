@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full bg-black flex flex-col desktop:flex-row relative">
+    <div class="w-full bg-black flex flex-col desktop:flex-row h-[8em] relative z-5">
         <!-- Logo Section -->
         <div class="w-full flex justify-between items-center p-4 desktop:w-[1/3] desktop:justify-start relative">
             <a href="/" class="w-full flex items-center">
@@ -21,25 +21,27 @@
         <div :class="{ 'hidden': !isMenuOpen, 'opacity-0': !isMenuOpen, 'opacity-100': isMenuOpen, 'block': isMenuOpen }"
             class="w-full absolute top-[100%] z-40 desktop:w-[2/3] flex flex-col desktop:flex-row items-center justify-center desktop:justify-end p-4 bg-black">
             <nav class="flex flex-col desktop:flex-row space-y-4 desktop:space-y-0 desktop:space-x-6">
+                <a href="/" class="navbutton">Home</a>
                 <a href="https://gallery.shotsbycade.com/" target="_blank"
-                    class="text-white navbutton hover:underline">Galleries</a>
-                <a href="/about" class="text-white navbutton hover:underline">About</a>
-                <a href="/portfolio" class="text-white navbutton hover:underline">Portfolio</a>
-                <a href="/pricing" class="text-white navbutton hover:underline">Pricing</a>
-                <a href="/contact" class="text-white navbutton hover:underline">Contact</a>
-                <a href="/help" class="text-white navbutton hover:underline">Help</a>
+                    class="navbutton">Galleries</a>
+                <a href="/about" class="navbutton">About</a>
+                <a href="/portfolio" class="navbutton">Portfolio</a>
+                <a href="/pricing" class="navbutton">Pricing</a>
+                <a href="/contact" class="navbutton">Contact</a>
+                <a href="/help" class="navbutton">Help</a>
             </nav>
         </div>
-        <div class="DesktopNav hidden desktop:block">
-            <nav class="flex flex-row justify-center h-full pr-[1cqw] uppercase relative">
-                <a href="https://gallery.shotsbycade.com/" target="_blank"
-                    class="text-white navbutton hover:underline">Galleries</a>
-                <a href="/about" class="text-white navbutton hover:underline">About</a>
-                <a href="/portfolio" class="text-white navbutton hover:underline">Portfolio</a>
-                <a href="/pricing" class="text-white navbutton hover:underline">Pricing</a>
-                <a href="/contact" class="text-white navbutton hover:underline">Contact</a>
-                <a href="/help" class="text-white navbutton hover:underline">Help</a>
-            </nav>
+        <div class="hidden desktop:flex h-[8em] items-center">
+            <div class="h-full w-full">
+                <nav class="flex flex-row h-[4em] mt-[2em] items-center justify-center mr-[4em]">
+                    <nuxt-link class="navbutton" to="/">Home</nuxt-link>
+                    <a class="navbutton" href="https://gallery.shotsbycade.com/" target="_blank">Galleries</a>
+                    <nuxt-link class="navbutton" to="/about">About</nuxt-link>
+                    <nuxt-link class="navbutton" to="/contact">Contact</nuxt-link>
+                    <nuxt-link class="navbutton" to="/portfolio">Portfolio</nuxt-link>
+                    <nuxt-link class="navbutton" to="/pricing">Pricing</nuxt-link>
+                </nav>
+            </div>
         </div>
 
     </div>
@@ -59,12 +61,11 @@
 
     /* Adjusts width for specific logo size needs */
     .navbutton {
-        transition: color 0.3s ease;
-        @apply text-center desktop:w-[1/5] desktop:pl-[1cqw] justify-center pt-[2.5cqw]
+        transition: all 0.1s ease;
+        @apply text-white p-[0.5em] hover:bg-white rounded-xl m-[0.25em] uppercase hover:text-black hover:shadow-red hover:shadow-lg border-2 hover:border-red border-transparent
     }
 
-    .navbutton:hover {
-        color: #e5e7eb;
-        /* Light grey on hover */
+    .link-exact-active {
+        @apply border-2  shadow-lg shadow-white/45 border-white
     }
 </style>

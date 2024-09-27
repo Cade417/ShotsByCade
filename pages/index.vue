@@ -1,7 +1,10 @@
 <template>
+
     <Head>
         <Title>Home</Title>
-        <Meta name="description" content="The home page for Shots By Cade. A photographer based out of Southwest Missouri. Contact or book with me today!"></Meta>
+        <Meta name="description"
+            content="The home page for Shots By Cade. A photographer based out of Southwest Missouri. Contact or book with me today!">
+        </Meta>
     </Head>
     <div class="bg-black text-white">
         <!-- Hero Section -->
@@ -30,8 +33,10 @@
                         <img src="/images/002_600x400.jpg" alt="Featured Work 1"
                             class="w-full h-64 object-cover transform transition-transform duration-300 hover:scale-110" />
                         <div class="p-4">
-                            <h3 class="text-xl font-semibold mb-2 uppercase">Agriculture photography and videography</h3>
-                            <p class="text-gray-300">Needing some photos or video from your farm or ag business, I can do that!</p>
+                            <h3 class="text-xl font-semibold mb-2 uppercase">Agriculture photography and videography
+                            </h3>
+                            <p class="text-gray-300">Needing some photos or video from your farm or ag business, I can
+                                do that!</p>
                         </div>
                     </div>
                     <div
@@ -40,7 +45,8 @@
                             class="w-full h-64 object-cover transform transition-transform duration-300 hover:scale-110" />
                         <div class="p-4">
                             <h3 class="text-xl font-semibold mb-2 uppercase">Athletics</h3>
-                            <p class="text-gray-300">With many years at the highest level, photography in sports is my forte.</p>
+                            <p class="text-gray-300">With many years at the highest level, photography in sports is my
+                                forte.</p>
                         </div>
                     </div>
                     <div
@@ -49,9 +55,54 @@
                             class="w-full h-64 object-cover transform transition-transform duration-300 hover:scale-110" />
                         <div class="p-4">
                             <h3 class="text-xl font-semibold mb-2 uppercase">Photoshoots</h3>
-                            <p class="text-gray-300">Are you wanting some photos for yourself, group, or family? I got you covered!</p>
+                            <p class="text-gray-300">Are you wanting some photos for yourself, group, or family? I got
+                                you covered!</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-16 bg-black">
+            <h1 class="text-center">What I do</h1>
+            <div class="text-center">
+                <h1 class="text-[3em] bg-white text-black p-[1em]">Photography</h1>
+                <div class="flex flex-wrap items-center justify-center w-[75%] ml-[12.5%] mr-[12.5%]">
+                    <img src="/images/baseball/WHS_FBSB_CRANEWOODBAT_GM3-14.webp" class="w-1/2"/>
+                    <img src="/images/baseball/WHS_FBSB_CRANEWOODBAT_GM3-15.webp" class="w-1/2"/>
+                    <img src="/images/baseball/WHS_FBSB_CRANEWOODBAT_GM3-16.webp" class="w-1/2"/>
+                    <img src="/images/baseball/WHS_FBSB_CRANEWOODBAT_GM3-17.webp"class="w-1/2"/>
+                    <img src="/images/baseball/oklahoma/CustomExport-1.jpg"/>
+                    <img src="/images/baseball/oklahoma/CustomExport.jpg"/>
+                    <img src="/images/baseball/oklahoma/CustomExport-2.jpg"/>
+                    <img src="/images/baseball/oklahoma/CustomExport-3.jpg"/>
+                    <img src="/images/baseball/oklahoma/CustomExport-4.jpg"/>
+                    <img src="/images/baseball/oklahoma/CustomExport-5.jpg"/>
+                    <img src="/images/baseball/oklahoma/CustomExport-6.jpg"/>
+                    <img src="/images/baseball/oklahoma/CustomExport-7.jpg"/>
+                    <img src="/images/baseball/oklahoma/CustomExport-8.jpg"/>
+                </div>
+            </div>
+            <div class="text-center">
+                <h1 class="text-[3em] bg-white text-black p-[1em]">videography</h1>
+                <p>Use the arrows to navigate between different videos. Click on the video to play it.</p>
+                <div class="flex flex-row items-center w-full">
+                    <!-- Video Display -->
+                    <button @click="prevVideo" class="btn w-[10%] VideoBtn">
+                            <Icon name="ooui:next-rtl"/>
+                    </button>
+                    <div class="flex flex-col items-center w-[80%]">
+                        <video :src="videos[currentIndex]" controls></video>
+                    </div>
+                    <button @click="nextVideo" class="btn w-[10%] VideoBtn">
+                            <Icon name="ooui:next-ltr"/>
+                    </button>
+                </div>
+            </div>
+            <div class="text-center">
+                <h1 class="text-[3em] bg-white text-black p-[1em]">Graphic Design</h1>
+                <div class="flex flex-wrap items-center justify-center">
+                    <img src="/images/graphicdzn/WheatonAtFordland.jpg"/>
+                    <img src="/images/graphicdzn/WheatonAtNevc.jpg"/>
                 </div>
             </div>
         </section>
@@ -59,7 +110,30 @@
 </template>
 
 <script setup>
-let HeaderImagePath = "assets/images/WHS_FBSB_CRANEWOODBAT-65.jpg"
+    import { ref } from 'vue';
+    let HeaderImagePath = "assets/images/WHS_FBSB_CRANEWOODBAT-65.jpg"
+    import videoElement from '~/components/videoElement.vue';
+
+    const videos = [
+  "https://rxvuigbyexdarrlusojh.supabase.co/storage/v1/object/public/weg_public/shotsbycade/videos/HalloweenVideo.mp4?t=2024-09-27T19%3A43%3A46.753Z",
+  "https://rxvuigbyexdarrlusojh.supabase.co/storage/v1/object/public/weg_public/shotsbycade/videos/BSB_OU_TEXAS_2023.mp4?t=2024-09-27T19%3A43%3A36.520Z",
+  "https://rxvuigbyexdarrlusojh.supabase.co/storage/v1/object/public/weg_public/shotsbycade/videos/RedSoloCup_Singalong.mp4?t=2024-09-27T19%3A43%3A56.430Z",
+];
+const currentIndex = ref(0);
+const nextVideo = () => {
+  if (currentIndex.value < videos.length - 1) {
+    currentIndex.value++;
+  } else {
+    currentIndex.value = 0; // Loop back to the first video
+  }
+};
+const prevVideo = () => {
+  if (currentIndex.value > 0) {
+    currentIndex.value--;
+  } else {
+    currentIndex.value = videos.length - 1; // Loop back to the last video
+  }
+};
 </script>
 
 <style>
@@ -79,5 +153,8 @@ let HeaderImagePath = "assets/images/WHS_FBSB_CRANEWOODBAT-65.jpg"
         border-width: 0.25cqw;
         border-color: #7f0c0c;
         /* Tailwind red color */
+    }
+    .VideoBtn {
+        @apply bg-white text-black font-bold uppercase m-1 rounded-xl border-2 hover:bg-black hover:text-white hover:border-white text-[2cqw] desktop:m-5
     }
 </style>

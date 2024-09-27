@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <AppHeader />
+    <div class="overflow-hidden overscroll-contain">
+        <AppHeader class="relative z-10"/>
         <slot />
-        <AppFooter/>
+        <AppFooter class="relative z-10"/>
     </div>
 </template>
 

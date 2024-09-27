@@ -9,10 +9,8 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  runtimeConfig: {
-    public: {
-      gtagId: "G-E1EZBDTEZC",
-    },
+  gtag: {
+    id: 'G-E1EZBDTEZC'
   },
   site: {
     url: "https://shotsbycade.com",
@@ -26,7 +24,7 @@ export default defineNuxtConfig({
     redirectToCanonicalSiteUrl: true,
   },
 
-  modules: ["@nuxt/icon", "@nuxtjs/seo", ['@nuxtjs/robots', { configPath: "~/config/robots.config" }]],
+  modules: ["@nuxt/icon", "@nuxtjs/seo", ['@nuxtjs/robots', { configPath: "~/config/robots.config" }], "nuxt-gtag"],
   router: {
     options: {
       linkActiveClass: "link-active",

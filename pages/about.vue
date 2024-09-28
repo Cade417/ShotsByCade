@@ -1,7 +1,10 @@
 <template>
     <Head>
-        <Title>About</Title>
-    </Head>
+            <Title>About</Title>
+            <Meta name="description"
+            content="About me, and my work.">
+            </Meta>
+        </Head>
     <div style="background-image: url('/images/2023.08.01_Hay-6.jpg');" class="fixed w-full h-full z-0 mt-[-8em] bg-cover overflow-hidden">
         
     </div>

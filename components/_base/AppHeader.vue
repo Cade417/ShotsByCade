@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full bg-black flex flex-col desktop:flex-row h-[8em] relative z-5">
+    <div class="w-full bg-black flex flex-col desktop:flex-row h-[8em] relative z-12">
         <!-- Logo Section -->
         <div class="w-full flex justify-between items-center p-4 desktop:w-[1/3] desktop:justify-start relative">
             <a href="/" class="w-full flex items-center">
@@ -19,7 +19,7 @@
 
         <!-- Navigation Links -->
         <div :class="{ 'hidden': !isMenuOpen, 'opacity-0': !isMenuOpen, 'opacity-100': isMenuOpen, 'block': isMenuOpen }"
-            class="w-full absolute top-[100%] z-40 desktop:w-[2/3] flex flex-col desktop:flex-row items-center justify-center desktop:justify-end p-4 bg-black">
+            class="w-full absolute top-[100%] z-40 desktop:w-[2/3] flex flex-col desktop:flex-row items-center justify-center desktop:justify-end p-4 bg-black z-15">
             <nav class="flex flex-col desktop:flex-row space-y-4 desktop:space-y-0 desktop:space-x-6">
                 <a href="/" class="navbutton">Home</a>
                 <a href="https://gallery.shotsbycade.com/" target="_blank"
@@ -62,7 +62,7 @@
     /* Adjusts width for specific logo size needs */
     .navbutton {
         transition: all 0.1s ease;
-        @apply text-white p-[0.5em] hover:bg-white rounded-xl m-[0.25em] uppercase hover:text-black hover:shadow-red hover:shadow-lg border-2 hover:border-red border-transparent
+        @apply text-white p-[0.5em] hover:bg-white rounded-xl m-[0.25em] uppercase hover:text-black hover:shadow-red hover:shadow-lg border-2 hover:border-red border-transparent text-center
     }
 
     .link-exact-active {

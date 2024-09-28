@@ -1,9 +1,8 @@
 <template>
 
     <Head>
-        <Title>Home</Title>
         <Meta name="description"
-            content="The home page for Shots By Cade. A photographer based out of Southwest Missouri. Contact or book with me today!">
+            content="Experienced event, family, friends, and sports photographer serving Southwest Missouri and Northwest Arkansas. Explore my portfolio and reach out today!">
         </Meta>
     </Head>
     <div class="bg-black text-white">
@@ -11,7 +10,7 @@
         <section class="relative h-screen flex items-center justify-center bg-cover bg-center"
             style="background-image: url('/images/WHS_FBSB_CRANEWOODBAT-65.jpg');">
             <div class="absolute inset-0 bg-black opacity-60"></div>
-            <div class="relative z-10 text-center p-6 md:p-12">
+            <div class="relative z-5 text-center p-6 md:p-12">
                 <h1
                     class="text-4xl md:text-6xl font-bold leading-tight mb-4 animate__animated animate__fadeIn animate__delay-1s">
                     Capturing Moments, Creating Memories</h1>

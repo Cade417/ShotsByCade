@@ -17,6 +17,8 @@ module.exports = {
       },
       fontFamily: {
         'Barley': ['Barley', 'sans-serif'],
+        'Playwrite': ['PlaywriteDEGrund', 'sans-serif'],
+        'Exo2': ['Exo2', 'sans-serif']
       },
       screens: {
         'mobile': '720px',  // Custom mobile breakpoint

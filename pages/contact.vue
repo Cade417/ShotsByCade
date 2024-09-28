@@ -2,6 +2,9 @@
     <div>
         <Head>
             <Title>Contact</Title>
+            <Meta name="description"
+            content="Contact Page">
+            </Meta>
         </Head>
         <div>
             <iframe

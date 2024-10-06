@@ -59,10 +59,11 @@
             description: "Baseball, Basketball, and other content for schools in Southwest Missouri.",
             images: [
                 "/images/high-school-sports/WHS_FBSB_CRANEWOODBAT-11.jpg",
-                "/images/high-school-sports/WHS_FBSB_CRANEWOODBAT-26.jpg",
                 "/images/high-school-sports/WHSATGHS_FBBALL2024-042.jpg",
                 "/images/high-school-sports/WHSATGHS_FBBALL2024-076.jpg",
                 "/images/high-school-sports/WHSATGHS_FBBALL2024-096.jpg",
+                "/images/high-school-sports/24-F-BSB-SouthwestAtWheaton-17.jpg",
+                "/images/high-school-sports/24-F-BSB-SouthwestAtWheaton-25.jpg"
             ]
         }
     ];

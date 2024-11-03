@@ -4,11 +4,26 @@
         <Meta name="description" content="My work for you to see, and make sure that you are getting the best."></Meta>
     </Head>
     <div class="portfolio">
-        <h1 class="title">Shots By Cade | Example Work</h1>
+        <h2 class="title text-centers">My Work</h2>
 
         <div class="portfolio-grid">
             <!-- Loop through portfolio items -->
-            <div class="portfolio-item" v-for="(item, index) in portfolioItems" :key="index">
+            <div class="portfolio-item" 
+            v-motion="{
+      initial: {
+        opacity: 0,
+        y: '1cqw'
+      },
+      visible: {
+        opacity: 1,
+        y: '0',
+        transition: {
+            type: 'ease',
+            duration: 1100
+        }
+      }
+    }"
+            v-for="(item, index) in portfolioItems" :key="index">
                 <h2 class="portfolio-title">{{ item.title }}</h2>
 
                 <!-- Image grid with dynamic puzzle layout -->
@@ -22,7 +37,6 @@
                 <p class="portfolio-description">{{ item.description }}</p>
             </div>
         </div>
-        <h1>This website was also coded without a website builder by myself to help establish what I do.</h1>
     </div>
 </template>
 

@@ -12,7 +12,7 @@
             <div class="absolute inset-0 bg-black opacity-60"></div>
             <div class="relative z-5 text-center p-6 md:p-12">
                 <h1
-                    class="text-4xl md:text-6xl font-bold leading-tight mb-4 animate__animated animate__fadeIn animate__delay-1s">
+                    class="hero-text text-4xl md:text-6xl font-bold leading-tight mb-4 animate__animated animate__fadeIn animate__delay-1s hero-text">
                     Capturing Moments, Creating Memories</h1>
                 <p class="text-lg md:text-2xl mb-6 animate__animated animate__fadeIn animate__delay-2s">Explore our
                     galleries and discover the art of photography.</p>
@@ -61,6 +61,17 @@
                 </div>
             </div>
         </section>
+        <section class="w-full"> <!-- Social Media -->
+            <div class="bg-white w-[80%] ml-[10%] mr-auto rounded-3xl " v-motion-slide-visible-top>
+                <h3 class="text-black text-center">Follow on Social</h3>
+                <div class="flex flex-col desktop:flex-row p-[1cqw] justify-center">
+                    <SocialMediaTag title="Facebook" icon-name="ic:baseline-facebook" url="https://www.facebook.com/shotsbycade/"/>
+                    <SocialMediaTag title="Instagram" icon-name="mdi:instagram" url="https://www.instagram.com/shotsbycade/"/>
+                    <SocialMediaTag title="TikTok" icon-name="ic:baseline-tiktok" url="https://www.tiktok.com/@shotsbycade"/>    
+                </div>
+                
+            </div>
+        </section>
         <section class="py-16 bg-black">
             <h1 class="text-center">What I do</h1>
             <div class="text-center">
@@ -83,18 +94,21 @@
             </div>
             <div class="text-center">
                 <h1 class="text-[3em] bg-white text-black p-[1em]">videography</h1>
-                <p>Use the arrows to navigate between different videos. Click on the video to play it.</p>
-                <div class="flex flex-row items-center w-full">
-                    <!-- Video Display -->
-                    <button @click="prevVideo" class="btn w-[10%] VideoBtn">
-                            <Icon name="ooui:next-rtl"/>
-                    </button>
-                    <div class="flex flex-col items-center w-[80%]">
-                        <video :src="videos[currentIndex]" controls></video>
-                    </div>
-                    <button @click="nextVideo" class="btn w-[10%] VideoBtn">
-                            <Icon name="ooui:next-ltr"/>
-                    </button>
+                <div class="flex w-full justify-center"  v-motion="{
+      initial: {
+        opacity: 0,
+        y: '1cqw'
+      },
+      visible: {
+        opacity: 1,
+        y: '0',
+        transition: {
+            type: 'ease',
+            duration: 1100
+        }
+      }
+    }">
+                    <video class="h-fit aspect-auto" src="/videos/oldtruckpromo.mp4" controls/>
                 </div>
             </div>
             <div class="text-center">
@@ -109,14 +123,25 @@
 </template>
 
 <script setup>
-    import { ref } from 'vue';
+import { ref } from 'vue';
     let HeaderImagePath = "assets/images/WHS_FBSB_CRANEWOODBAT-65.jpg"
     import videoElement from '~/components/videoElement.vue';
+
+    const initial = ref({
+  y: 100,
+  opacity: 0,
+})
+
+const enter = ref({
+  y: 0,
+  opacity: 1,
+})
 
     const videos = [
   "https://rxvuigbyexdarrlusojh.supabase.co/storage/v1/object/public/weg_public/shotsbycade/videos/HalloweenVideo.mp4?t=2024-09-27T19%3A43%3A46.753Z",
   "https://rxvuigbyexdarrlusojh.supabase.co/storage/v1/object/public/weg_public/shotsbycade/videos/BSB_OU_TEXAS_2023.mp4?t=2024-09-27T19%3A43%3A36.520Z",
   "https://rxvuigbyexdarrlusojh.supabase.co/storage/v1/object/public/weg_public/shotsbycade/videos/RedSoloCup_Singalong.mp4?t=2024-09-27T19%3A43%3A56.430Z",
+  "/videos/oldtruckpromo.mp4",
 ];
 const currentIndex = ref(0);
 const nextVideo = () => {
@@ -156,4 +181,8 @@ const prevVideo = () => {
     .VideoBtn {
         @apply bg-white text-black font-bold uppercase m-1 rounded-xl border-2 hover:bg-black hover:text-white hover:border-white text-[2cqw] desktop:m-5
     }
+    .hero-title {
+  font-size: clamp(2rem, 4vw + 1rem, 6rem); /* Responsive text size */
+  animation: pulse 2s infinite; /* Subtle pulsing effect */
+}
 </style>

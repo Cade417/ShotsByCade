@@ -28,6 +28,7 @@
                 <a href="/portfolio" class="navbutton">Portfolio</a>
                 <a href="/pricing" class="navbutton">Pricing</a>
                 <a href="/contact" class="navbutton">Contact</a>
+                <a href="/calendar" class="navbutton">Calendar</a>
                 <a href="/help" class="navbutton">Help</a>
             </nav>
         </div>
@@ -39,6 +40,7 @@
                     <nuxt-link class="navbutton" to="/about">About</nuxt-link>
                     <nuxt-link class="navbutton" to="/contact">Contact</nuxt-link>
                     <nuxt-link class="navbutton" to="/portfolio">Portfolio</nuxt-link>
+                    <nuxt-link class="navbutton" to="/calendar">Calendar</nuxt-link>
                     <nuxt-link class="navbutton" to="/pricing">Pricing</nuxt-link>
                 </nav>
             </div>

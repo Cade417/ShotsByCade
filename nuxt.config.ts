@@ -9,6 +9,11 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  runtimeConfig: {
+    public: {
+      contactFormKey: process.env.CONTACT_FORM_KEY,
+    },
+  },
   gtag: {
     id: 'G-E1EZBDTEZC'
   },
@@ -24,7 +29,7 @@ export default defineNuxtConfig({
     redirectToCanonicalSiteUrl: true,
   },
 
-  modules: ["@nuxt/icon", "@nuxtjs/seo", ['@nuxtjs/robots', { configPath: "~/config/robots.config" }], "nuxt-gtag"],
+  modules: ["@nuxt/icon", "@nuxtjs/seo",'@vueuse/motion/nuxt', ['@nuxtjs/robots', { configPath: "~/config/robots.config" }], "nuxt-gtag"],
   router: {
     options: {
       linkActiveClass: "link-active",
@@ -33,6 +38,12 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      script: [
+        {
+          src: 'https://bhijnsdz.formester.com/widget/standard.js',
+          type: 'module',
+        },
+      ],
       title: 'Shots By Cade - Photography Services',
       meta: [
         { name: 'description', content: 'Vent, Family, Friends, and Sports photographer covering Southwest Missouri and Northwest Arkansas. View work on my website, and contact us today.' },

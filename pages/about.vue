@@ -80,6 +80,11 @@
                 on <a href="https://www.facebook.com/shotsbycade" target="_blank" class="text-gray-900 underline">social media</a>.
             </p>
             <p class="text-lg leading-relaxed">Thank you for visiting!</p>
+            <div class="flex flex-row">
+                <SocialMediaTag title="Facebook" icon-name="ic:baseline-facebook" url="https://www.facebook.com/shotsbycade/"/>
+                    <SocialMediaTag title="Instagram" icon-name="mdi:instagram" url="https://www.instagram.com/shotsbycade/"/>
+                    <SocialMediaTag title="TikTok" icon-name="ic:baseline-tiktok" url="https://www.tiktok.com/@shotsbycade"/>
+            </div>
         </section>
     </div>
 </template>

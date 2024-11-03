@@ -26,7 +26,8 @@
                 <hr>
                 <div class="flex flex-col desktop:flex-row justify-evenly pt-[4em] pb-[4em] w-full">
                     <div
-                        class="border-[0.25em] border-black desktop:w-1/4 rounded-2xl shadow-lg p-4 transition-transform transform hover:scale-105">
+                        class="border-[0.25em] border-black desktop:w-1/4 rounded-2xl shadow-lg p-4 transition-transform transform hover:scale-105"
+                        >
                         <h2 class="text-[2em] font-bold text-center">Essential Moments</h2>
                         <h3 class="text-lg font-semibold text-center text-red-600">Starting at just $150!</h3>
                         <div>
@@ -43,7 +44,7 @@
                     </div>
 
                     <div
-                        class="border-[0.25em] border-black desktop:w-1/4 rounded-2xl shadow-lg p-4 transition-transform transform hover:scale-105 mt-4 desktop:mt-0">
+                        class="border-[0.25em] border-black desktop:w-1/4 rounded-2xl shadow-lg p-4 transition-transform transform hover:scale-105 mt-4 desktop:mt-0" v-motion :initial="initial" :visible="scrollOn">
                         <h2 class="text-[2em] font-bold text-center">Signature Experience</h2>
                         <h3 class="text-lg font-semibold text-center text-red-600">Starting at just $275!</h3>
                         <div>
@@ -60,7 +61,7 @@
                     </div>
 
                     <div
-                        class="border-[0.25em] border-black desktop:w-1/4 rounded-2xl shadow-lg p-4 transition-transform transform hover:scale-105 mt-4 desktop:mt-0">
+                    v-motion :initial="initial" :visible="scrollOn" class="border-[0.25em] border-black desktop:w-1/4 rounded-2xl shadow-lg p-4 transition-transform transform hover:scale-105 mt-4 desktop:mt-0">
                         <h2 class="text-[2em] font-bold text-center">Luxury Capture</h2>
                         <h3 class="text-lg font-semibold text-center text-red-600">Starting at just $400!</h3>
                         <div>
@@ -90,7 +91,7 @@
                     senior portraits that reflect your unique personality and style.</p>
                 <hr>
                 <div class="flex flex-col desktop:flex-row justify-evenly pt-[4em] pb-[4em] w-full">
-                    <div
+                    <div v-motion :initial="initial" :visible="scrollOn"
                         class="border-[0.25em] border-black desktop:w-1/4 rounded-2xl shadow-lg p-4 transition-transform transform hover:scale-105">
                         <h2 class="text-[2em] font-bold text-center">Classic Senior Moments</h2>
                         <h3 class="text-lg font-semibold text-center text-red-600">Starting at just $100!</h3>
@@ -108,7 +109,7 @@
                     </div>
 
 
-                    <div
+                    <div v-motion :initial="initial" :visible="scrollOn"
                         class="border-[0.25em] border-black desktop:w-1/4 rounded-2xl shadow-lg p-4 transition-transform transform hover:scale-105 mt-4 desktop:mt-0">
                         <h2 class="text-[2em] font-bold text-center">Signature Senior Experience</h2>
                         <h3 class="text-lg font-semibold text-center text-red-600">Starting at just $200!</h3>
@@ -141,7 +142,7 @@
                     highlights your passion, dedication, and athleticism!</p>
                 <hr>
                 <div class="flex flex-col desktop:flex-row justify-evenly pt-[4em] pb-[4em] w-full">
-                    <div
+                    <div v-motion :initial="initial" :visible="scrollOn"
                         class="border-[0.25em] border-black desktop:w-1/4 rounded-2xl shadow-lg p-4 transition-transform transform hover:scale-105">
                         <h2 class="text-[2em] font-bold text-center">Gameday Photos</h2>
                         <h3 class="text-lg font-semibold text-center text-red-600">Capture Every Thrilling Moment!</h3>
@@ -157,7 +158,7 @@
 
 
 
-                    <div
+                    <div v-motion :initial="initial" :visible="scrollOn"
                         class="border-[0.25em] border-black desktop:w-1/4 rounded-2xl shadow-lg p-4 transition-transform transform hover:scale-105 mt-4 desktop:mt-0">
                         <h2 class="text-[2em] font-bold text-center">Media Day Experience</h2>
                         <h3 class="text-lg font-semibold text-center text-red-600">Pricing Tailored to Your Event and
@@ -172,8 +173,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div
-                        class="border-[0.25em] border-black desktop:w-1/4 rounded-2xl shadow-lg p-4 transition-transform transform hover:scale-105">
+                    <div v-motion :initial="initial" :visible="scrollOn"
+                        class="border-[0.25em] border-black desktop:w-1/4 rounded-2xl shadow-lg p-4 transition-transform transform hover:scale-105 mt-4 desktop:mt-0">
                         <h2 class="text-[2em] font-bold text-center">Mini Team Sessions</h2>
                         <h3 class="text-lg font-semibold text-center text-red-600">Capture Individual Memories Together!
                         </h3>
@@ -198,7 +199,9 @@
             </section>
             <div class="text-center w-[90%] ml-[5%] desktop:w-[75%] desktop:ml-[12.5%]">
                 <h2>Have something special in mind?</h2>
-                <p class="font-Playwrite text-[1.5em]">I am more than happy to work with you, and to get what you want at a fair price! If you have any questions, or want to add something to your booking, please do not hesitate to reach out and I will make it work!</p>
+                <p class="font-Playwrite text-[1.5em]">I am more than happy to work with you, and to get what you want
+                    at a fair price! If you have any questions, or want to add something to your booking, please do not
+                    hesitate to reach out and I will make it work!</p>
             </div>
         </div>
 
@@ -207,6 +210,17 @@
 
 
 <script setup>
+
+    const initial = ref({
+        opacity: 0,
+    })
+    const scrollOn = ref({
+        opacity: 1,
+        transition: {
+            type: 'ease',
+            duration: 1100
+        }
+    })
 </script>
 
 <style lang="css" scoped></style>

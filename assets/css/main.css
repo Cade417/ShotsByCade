@@ -76,3 +76,6 @@ h4 {
 p {
     @apply text-[1em] font-Exo2 font-normal
 }
+.form-input {
+    @apply w-full bg-black text-white
+}
